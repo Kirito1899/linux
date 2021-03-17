@@ -23,7 +23,7 @@ if os.getpid() == main_tr:
 
 for i in range(1, int(sys.argv[3])*my_number):
     if os.getppid() == main_ppid:
-        os.kill(os.getpid(), 1)
+        os.kill(os.getpid(), 9)
     my_file.write(f"{sys.argv[1]}, iterrs = {i}, pid = {os.getpid()}, my_number = {my_number}\n")
     time.sleep(10)
 
@@ -31,4 +31,4 @@ if os.getpid() == main_tr:
     while(True):
         for p in pids:
             if os.path.exists(f'/proc/{p}') == False:
-                os.kill(os.getpid(), 1)
+                os.kill(os.getpid(), 9)
