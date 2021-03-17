@@ -28,6 +28,7 @@ for i in range(1, int(sys.argv[3])*my_number):
     time.sleep(10)
 
 if os.getpid() == main_tr:
-    for p in pids:
-        if os.path.exists(f'/proc/{p}') == False:
-            os.kill(os.getpid(), 1)
+    while(True):
+        for p in pids:
+            if os.path.exists(f'/proc/{p}') == False:
+                os.kill(os.getpid(), 1)
