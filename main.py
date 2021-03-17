@@ -21,4 +21,3 @@ for i in range(0, int(sys.argv[3])*my_number):
     my_file.write(f"{sys.argv[1]}, iterrs = {i}\n")
     time.sleep(1)
 
-print("hello\n")
