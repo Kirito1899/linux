@@ -24,3 +24,18 @@
   SUID
 13. Какая командf приостановит процессы с именем tar?  
   killall -s STOP tar
+
+Задание: при вызове скрипта /home/alex/forks/main.py hello 3 2  
+получено:
+hello, iterrs = 0  
+hello, iterrs = 1  
+hello, iterrs = 0  
+hello, iterrs = 1  
+hello, iterrs = 2  
+hello, iterrs = 3  
+hello, iterrs = 0  
+hello, iterrs = 1  
+hello, iterrs = 2  
+hello, iterrs = 3  
+hello, iterrs = 4  
+hello, iterrs = 5  
