@@ -58,3 +58,23 @@ read file - rectangle
 Задача 2  
 
 настроить tmux, научиться запускать, создавать новые pane, делать split pane,  управление мышью, zoom, прокрутка, закрытие pane, detach.  \
+
+ создать новую сессию -  tmux  
+ создать сессию командой new-session и задать ей удобное имя - tmux new-session -s losst  
+ Создать новое окно Ctrl + B, C  
+ Следующее окно Ctrl + B, N
+ Увести tmux в фон Ctrl + B, D (detach)
+ Предыдущее окно Ctrl + B, P  
+ Разделить текущее окно по вертикали Ctrl + B, %  
+ Разделить текущее окно по горизонтали Ctrl + B, "  
+ 
+ ПОДДЕРЖКА МЫШКИ 
+ vi ~/.tmux.conf  
+ set-option -g -q mouse on  
+ bind-key -T root WheelUpPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; copy-mode -e; send-keys -M"  
+ bind-key -T root WheelDownPane if-shell -F -t = "#{alternate_on}" "send-keys -M" "select-pane -t =; send-keys -M"  
+ ~/.tmux.conf  
+ 
+ zoom -  Ctrl + b, а затем z  
+ 
+ 
