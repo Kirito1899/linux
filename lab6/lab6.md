@@ -28,3 +28,9 @@ dd                        вырезать (удалить) строку
 ![alt text](https://github.com/Kirito1899/linux/blob/lab6/lab6/crontab.png)  
 ![alt text](https://github.com/Kirito1899/linux/blob/lab6/lab6/crontab_res.png)  
 3 примонтировать usb flash и отмонтировать
+fdisk -l  
+/dev/sdb1  *     2048 60437491 60435444 28.8G  7 HPFS/NTFS/exFAT  
+sudo mkdir /mnt/usb  
+sudo mount /dev/sdb1 /mnt/usb  
+Отмонтировать:  
+sudo umount /dev/sdb1  
