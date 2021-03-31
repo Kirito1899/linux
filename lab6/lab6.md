@@ -24,5 +24,7 @@ dd                        вырезать (удалить) строку
 1 продемонстрировать работу at по запуску задачи записи в файл произвольной строки  
 ![alt text](https://github.com/Kirito1899/linux/blob/lab6/lab6/at.png)  
 ![alt text](https://github.com/Kirito1899/linux/blob/lab6/lab6/at_res.png)  
-2 продемонстрировать работу cron по запуску задачи записи в файл произвольной строки
+2 продемонстрировать работу cron по запуску задачи записи в файл произвольной строки  
+![alt text](https://github.com/Kirito1899/linux/blob/lab6/lab6/crontab.png)  
+![alt text](https://github.com/Kirito1899/linux/blob/lab6/lab6/crontab_res.png)  
 3 примонтировать usb flash и отмонтировать
