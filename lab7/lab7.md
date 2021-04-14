@@ -60,9 +60,36 @@ route add 10.15.35.0 netmask 255.255.255.0 gw 192.168.2.1
 
 Практика  
 1 Произвести настройку IP адреса сетевого интерфейса eth0 через конфиг и на лету  
+sudo ifconfig eth0 192.168.0.1 netmask 255.255.255.0 изменить ip на лету  
+sudo nano /etc/network/interfaces  -через config   
+auto lo  
+iface lo inet loopback  
+auto eth0  
+iface eth0 inet static  
+address 192.168.1.18  
+netmask 255.255.0.0  
+gateway 192.168.1.253  
 2 Остановить и запустить сетевой интерфейс eth0  
-3 Произвести смену аппаратного (MAC) адреса сетевого интерфейса eth0;  
+sudo ifconfig eth0 down -остановить  
+ sudo ifconfig eth0 up - запустить  
+3 Произвести смену аппаратного (MAC) адреса сетевого интерфейса eth0; 
+Сначала сетевой интерфейс надо выключить:
+ifconfig eth0 down  
+Для того, чтобы изменить mac-адрес сетевой, вводим команду:  
+ifconfig eth0 hw ether 1c:bb:79:00:00:e1  
+Теперь включаем интерфейс eth0 обратно:  
+ifconfig eth0 up  
 4 Показать таблицу сетевых маршрутов. Установить маршрут по умолчанию;  
+route -  таблицасетевых маршрутов
+ip route add default via 192.168.1.1 
 5 Получить настройки IP от DHCP сервера;  
+sudo nano /etc/network/interfaces  
+auto lo  
+iface lo inet loopback  
+auto eth0  
+iface eth0 inet dhcp  
 6 проверить пропускную способность между виртуальными машинами  
+
 7 настроить связь между виртуальными машинами через vlan 15  
+
+
