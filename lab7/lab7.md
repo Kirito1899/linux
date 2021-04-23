@@ -86,21 +86,21 @@ ip route add default via 192.168.183.2
 5 Получить настройки IP от DHCP сервера;  
 iface eth0 inet dhcp
 auto eth0 
-![](https://github.com/Kirito1899/linux/blob/lab7/lab7/5.png)
+![](https://github.com/Kirito1899/linux/blob/lab7/lab7/5.png)  
 6 проверить пропускную способность между виртуальными машинами  
-![](https://github.com/Kirito1899/linux/blob/lab7/lab7/6.png)
+![](https://github.com/Kirito1899/linux/blob/lab7/lab7/6.png)  
 7 настроить связь между виртуальными машинами через vlan 15  
 Изменить настройки обоих виртуальных машин сетевой адаптер изменить VMnet15, прописать ip addres  
-auto eth0.10
-iface eth0.10 inet static
-  address 192.168.0.1/24
-  address 192.168.0.1
-  vlan_raw_device eth0
+auto eth0.10  
+iface eth0.10 inet static  
+  address 192.168.0.1/24  
+  address 192.168.0.1  
+  vlan_raw_device eth0  
   
-auto eth0.10 
-iface eth0.10 inet static
-  address 192.168.0.2/24
-  address 192.168.0.1
-  vlan_raw_device eth0
-![7](https://user-images.githubusercontent.com/70812795/115824116-e7374580-a420-11eb-8023-ae6e1ac941e0.png)
+auto eth0.10   
+iface eth0.10 inet static  
+  address 192.168.0.2/24  
+  address 192.168.0.1  
+  vlan_raw_device eth0  
+![7](https://user-images.githubusercontent.com/70812795/115824116-e7374580-a420-11eb-8023-ae6e1ac941e0.png)  
 
