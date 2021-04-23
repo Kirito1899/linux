@@ -81,18 +81,26 @@ ifconfig eth0 hw ether 1c:bb:79:00:00:e1
 ifconfig eth0 up  
 4 Показать таблицу сетевых маршрутов. Установить маршрут по умолчанию;  
 route -  таблицасетевых маршрутов
-ip route add default via 192.168.1.1 
+ip route add default via 192.168.183.2 
+![](https://github.com/Kirito1899/linux/blob/lab7/lab7/4.png)
 5 Получить настройки IP от DHCP сервера;  
-sudo nano /etc/network/interfaces  
-auto lo  
-iface lo inet loopback  
-auto eth0  
-iface eth0 inet dhcp  
+iface eth0 inet dhcp
+auto eth0 
+![](https://github.com/Kirito1899/linux/blob/lab7/lab7/5.png)
 6 проверить пропускную способность между виртуальными машинами  
-ntttcp -r -t 300 - на виртуальной машине-получателе.
-ntttcp -s10.0.0.4 -t 300 - виртуальной машине-отправителе 
+![](https://github.com/Kirito1899/linux/blob/lab7/lab7/6.png)
 7 настроить связь между виртуальными машинами через vlan 15  
 Изменить настройки обоих виртуальных машин сетевой адаптер изменить VMnet15, прописать ip addres  
-sudo ifconfig eth0 192.168.0.10 netmask 255.255.255.0 -на 1 виртуалке  
-sudo ifconfig eth0 192.168.0.20 netmask 255.255.255.0 -на 2 виртуалке  
+auto eth0.10
+iface eth0.10 inet static
+  address 192.168.0.1/24
+  address 192.168.0.1
+  vlan_raw_device eth0
+  
+auto eth0.10 
+iface eth0.10 inet static
+  address 192.168.0.2/24
+  address 192.168.0.1
+  vlan_raw_device eth0
+![7](https://user-images.githubusercontent.com/70812795/115824116-e7374580-a420-11eb-8023-ae6e1ac941e0.png)
 
