@@ -37,7 +37,18 @@ LVM — это дополнительный слой абстракции от �
 mdadm --create --verbose /dev/md0 --level=1
 --raid-devices=2 /dev/sdb1 /dev/sdc1  
 ![image](https://user-images.githubusercontent.com/70812795/116358184-cacb4c80-a816-11eb-8f4b-a4de73e4d60c.png)  
+![image](https://user-images.githubusercontent.com/70812795/116405066-adaf7180-a848-11eb-9619-4a05dcf0b623.png)  
 поверх raid массива развернуть lvm  
+![image](https://user-images.githubusercontent.com/70812795/116405766-6f668200-a849-11eb-9410-aad27fc3e37c.png)  
+![image](https://user-images.githubusercontent.com/70812795/116407401-2dd6d680-a84b-11eb-93ee-bd76b840d202.png)  
 создать файловую систему в lvm разделах и примонтировать в систему  
+![image](https://user-images.githubusercontent.com/70812795/116413373-fd923680-a850-11eb-8e46-17df7e198599.png)  
 продемонстрировать умение замены жесткого диска  
+![image](https://user-images.githubusercontent.com/70812795/116414043-94f78980-a851-11eb-861d-2d889f677246.png)  
+![image](https://user-images.githubusercontent.com/70812795/116414293-c5d7be80-a851-11eb-8a89-25e58dea95dd.png)  
+![image](https://user-images.githubusercontent.com/70812795/116414320-cbcd9f80-a851-11eb-842c-90791aab8093.png)  
+
 расширить размер раздела за счет неиспользуемого пространтсва в raid массиве  
+mdadm --manage /dev/md0 --fail /dev/sdb mdadm --manage /dev/md0 --remove /dev/sdb sfdisk -d /dev/sdc | sfdisk /dev/sdb  
+![image](https://user-images.githubusercontent.com/70812795/116414427-e30c8d00-a851-11eb-9ee6-1dd23ce37e63.png)
+
