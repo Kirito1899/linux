@@ -41,7 +41,7 @@
   
 3  запуск контейнера, остановка, удаление  
   
-  ![image](https://user-images.githubusercontent.com/70812795/119678526-075f8780-be59-11eb-920f-c191dedce1d5.png)
+  ![image](https://user-images.githubusercontent.com/70812795/119678526-075f8780-be59-11eb-920f-c191dedce1d5.png)  
 4  написание микросервиса в docker-compose с сетями bridge и macvlan  
   docker network create bridge-network  
   ![image](https://user-images.githubusercontent.com/70812795/119681456-881f8300-be5b-11eb-9ff3-18e02cd66cba.png)
